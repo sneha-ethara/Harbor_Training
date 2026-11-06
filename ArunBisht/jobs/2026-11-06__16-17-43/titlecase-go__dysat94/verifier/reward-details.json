@@ -1,0 +1,60 @@
+{
+  "reward": {
+    "kind": "group",
+    "score": 0.6667,
+    "aggregation": "weighted-mean",
+    "components": [
+      {
+        "name": "behaviour",
+        "weight": 4.0,
+        "detail": {
+          "score": 1.0,
+          "criteria": [
+            {
+              "name": "behaviour",
+              "value": 1.0,
+              "raw": 1.0,
+              "weight": 1.0,
+              "description": "behaviour"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      },
+      {
+        "name": "build",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.0,
+          "criteria": [
+            {
+              "name": "build",
+              "value": 0.0,
+              "raw": false,
+              "weight": 1.0,
+              "description": "build"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      },
+      {
+        "name": "no_python",
+        "weight": 1.0,
+        "detail": {
+          "score": 0.0,
+          "criteria": [
+            {
+              "name": "no_python",
+              "value": 0.0,
+              "raw": false,
+              "weight": 1.0,
+              "description": "no_python"
+            }
+          ],
+          "kind": "programmatic"
+        }
+      }
+    ]
+  }
+}

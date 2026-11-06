@@ -1,0 +1,32 @@
+schema_version = "1.4"
+artifacts = ["/workspace/repo"]
+
+[task]
+name = "isha/titlecase-go"
+version = "1.0.0"
+description = ""
+authors = []
+keywords = []
+
+[metadata]
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+network_mode = "public"
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

@@ -1,0 +1,13 @@
+# Harbor packager + git: keep local/authoring material out of the
+# published task package and out of the pushed repo.
+# NOTE: screenshot/ is deliberately NOT listed here — you want the
+# reward screenshots pushed with titlecase-go. (.harborignore still
+# keeps them out of the Harbor run-time uploads.)
+cheat/
+jobs/
+.git/
+*.exe
+__pycache__/
+*.pyc
+.DS_Store
+dist.tar.gz

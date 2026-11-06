@@ -1,0 +1,8 @@
+# Local authoring material: never publish these (cheat/ contains answers).
+cheat/
+screenshot/
+NOTES.md
+README.md
+jobs/
+.git/
+*.exe

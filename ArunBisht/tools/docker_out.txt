@@ -1,0 +1,16 @@
+﻿--- files:
+AUTHORS.rst
+LICENSE.txt
+README.rst
+go.mod
+main.go
+pyproject.toml
+setup.cfg
+tox.ini
+--- py files left:
+--- go build ./...:
+BUILD_OK
+--- go build . (root):
+ROOT_BUILD_OK
+rc=0
+2000 /tools/out/out.txt

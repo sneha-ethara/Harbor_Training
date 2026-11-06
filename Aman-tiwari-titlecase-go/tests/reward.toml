@@ -1,0 +1,8 @@
+# Final score = weighted mean of the three checks.
+#   build      (w=1): `go build ./...` passes
+#   no_python  (w=1): no .py files left AND the build passes
+#   behaviour  (w=4): share of hidden lines that match the original exactly
+[[reward]]
+name = "reward"
+aggregation = "weighted-mean"
+weights = { build = 1.0, no_python = 1.0, behaviour = 4.0 }

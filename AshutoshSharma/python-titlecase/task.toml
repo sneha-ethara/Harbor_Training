@@ -1,0 +1,31 @@
+schema_version = "1.4"
+
+artifacts = ["/workspace/repo"]
+
+[task]
+name = "local/python-titlecase"
+version = "1.0.0"
+
+[metadata]
+category = "programming"
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+
+[verifier]
+environment_mode = "separate"
+timeout_sec = 300.0
+
+[verifier.environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240

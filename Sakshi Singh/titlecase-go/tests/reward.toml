@@ -1,0 +1,6 @@
+# build = 1, no_python = 1, hidden behaviour = 4  ->  everything must be right
+# to reach 1.0. Cheat that copies visible answers but leaves .py scores 1/6.
+[[reward]]
+name = "reward"
+aggregation = "weighted-mean"
+weights = { build = 1.0, no_python = 1.0, behaviour = 4.0 }

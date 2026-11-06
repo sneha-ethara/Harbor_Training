@@ -1,0 +1,12 @@
+.eggs
+.coverage
+.tox
+build
+dist
+temp
+titlecase.egg-info
+*.swp
+*.swo
+*.pyc
+*$py.class
+jobs/

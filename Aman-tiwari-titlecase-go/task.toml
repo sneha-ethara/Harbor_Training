@@ -1,0 +1,46 @@
+schema_version = "1.4"
+
+# The agent's finished repo is copied into the separate verifier container
+# at the same path (/workspace/repo).
+artifacts = ["/workspace/repo"]
+
+[task]
+name = "day3/titlecase-go"
+version = "1.0.0"
+description = "Port python-titlecase to Go with byte-identical output"
+authors = [{ name = "aman.tiwari", email = "aman.tiwari@ethara.ai" }]
+keywords = ["porting", "go", "python", "regex", "titlecase"]
+
+[metadata]
+author_name = "aman.tiwari"
+category = "programming"
+tags = ["porting", "go", "python", "regex", "unicode"]
+source_repo = "https://github.com/ppannuto/python-titlecase"
+source_commit = "42f43e2de55bf003b286c6f8e8d8b2d26676a167"
+source_license = "MIT"
+
+[agent]
+timeout_sec = 1800.0                 # how long the agent may work
+user = "agent"                       # non-root: cannot tamper with the system
+network_mode = "allowlist"           # no internet; Harbor adds the model endpoint itself
+allowed_hosts = []
+
+[verifier]
+timeout_sec = 300.0                  # build + run 2000 hidden titles
+environment_mode = "separate"        # tests run in their own container (tests/Dockerfile)
+network_mode = "allowlist"           # only PyPI, so uvx can download Reward Kit
+allowed_hosts = ["pypi.org", "files.pythonhosted.org"]
+
+[verifier.env]
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

@@ -1,0 +1,5 @@
+services:
+  main:
+    build:
+      context: ../..
+      dockerfile: titlecase-go/environment/Dockerfile
